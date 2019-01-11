@@ -1,11 +1,12 @@
-URxvt.font: xft:RobotoMono\ Nerd\ Font\ Mono:size=12
+URxvt.font: xft:RobotoMono\ Nerd\ Font:size=12
 URxvt.scrollBar: false
 URxvt.depth: 32
-
+URxvt.lineSpace: 1
+URxvt.letterSpace: 1
 
 ! Base16 Solarized Dark
 ! Scheme: Ethan Schoonover (http://ethanschoonover.com/solarized)
-
+!
 #define base00 #002b36
 #define base01 #073642
 #define base02 #586e75
@@ -31,7 +32,7 @@ URxvt.depth: 32
 *background:   base00
 #endif
 *cursorColor:  base05
-
+!
 *color0:       base00
 *color1:       base08
 *color2:       base0B
@@ -40,7 +41,7 @@ URxvt.depth: 32
 *color5:       base0E
 *color6:       base0C
 *color7:       base05
-
+!
 *color8:       base03
 *color9:       base08
 *color10:      base0B
@@ -49,7 +50,7 @@ URxvt.depth: 32
 *color13:      base0E
 *color14:      base0C
 *color15:      base07
-
+!
 ! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
 ! use 'shell' template to set these if necessary
 *color16:      base09
