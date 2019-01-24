@@ -213,7 +213,7 @@ hide_edge_borders both
 #	font pango: MesloLGS Nerd Font 12
 #	position top
 #	strip_workspace_numbers yes
-#	status_command ~/.config/i3/bumblebee-status/bumblebee-status -m  mpd pasink date time nic docker_ps  battery -t black-white-custom 
+#	status_command ~/.config/i3/bumblebee-status/bumblebee-status -m  mpd pasink date time nic docker_ps  battery -t black-white-custom
 #	colors {
 #		background $bg-color
 #		separator #757575
@@ -237,6 +237,7 @@ for_window [class="zoom"] floating enable
 for_window [class="Pavucontrol"] floating enable
 for_window [class="xpad"] floating enable
 for_window [class="Gnome-power-statistics"] floating enable
+for_window [class="Blueman-manager"] floating enable
 for_window [class="jetbrains-idea"] layout tabbed
 
 # launch polybar
@@ -245,8 +246,8 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id setxkbmap -rules evdev -model pc105 -layout us -variant intl
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec_always --no-startup-id ~/.screenlayout/dual_screen.sh
+exec_always --no-startup-id franz
 
-exec --no-startup-id i3-msg 'workspace $w1; exec franz'
 exec --no-startup-id i3-msg 'workspace $w10; append_layout ~/.config/i3/w10.json'
 exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -e ncmpcpp -s clock'
 exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -e cava'
@@ -260,6 +261,7 @@ exec --no-startup-id blueman-manager
 assign [class="Google-chrome"] $w2
 assign [class="jetbrains-idea"] $w3
 assign [class="jetbrains-datagrip"] $w5
+assign [class="Franz"] $w1
 
 gaps inner 15
 smart_gaps on
