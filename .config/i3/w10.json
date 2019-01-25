@@ -1,0 +1,73 @@
+{
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 484,
+               "width": 884,
+               "x": 0,
+               "y": 0
+            },
+            "name": "clock",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^URxvt$",
+               "instance": "^tty-clock$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 484,
+               "width": 884,
+               "x": 0,
+               "y": 0
+            },
+            "name": "cava",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "^URxvt$",
+               "instance": "^urxvt$",
+               "title": "^cava$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 484,
+       "width": 884,
+       "x": 0,
+       "y": 0
+    },
+    "name": "ncmpcpp 0.7.5",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^URxvt$",
+       "instance": "^urxvt$",
+       "title": "^ncmpcpp$"
+       }
+    ],
+    "type": "con"
+}
+

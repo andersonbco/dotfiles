@@ -249,7 +249,7 @@ exec_always --no-startup-id ~/.screenlayout/dual_screen.sh
 exec_always --no-startup-id franz
 
 exec --no-startup-id i3-msg 'workspace $w10; append_layout ~/.config/i3/w10.json'
-exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -e ncmpcpp -s clock'
+exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -name "tty-clock" -e tty-clock'
 exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -e cava'
 exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -e ncmpcpp -s playlist'
 exec --no-startup-id i3-msg 'workspace $w2;'
