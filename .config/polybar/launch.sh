@@ -10,10 +10,10 @@ hdmi_off=$(xrandr -q | grep "HDMI-1" | grep "disconnected" -q)
 
 if [ "$hdmi_off" ]
 then
-	polybar main_bar &
+	MONITOR=eDP-1 polybar single_bar &
 else
-  polybar main_bar &
-	polybar aux_bar &
+  MONITOR=HDMI-1 polybar main_bar &
+	MONITOR=eDP-1 polybar aux_bar &
 fi
 
 
