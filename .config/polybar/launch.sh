@@ -6,9 +6,9 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-hdmi_off=$(xrandr -q | grep "HDMI-1" | grep "disconnected" -q)
+hdmi_off=$(xrandr -q | grep "HDMI-1" | grep "disconnected")
 
-if [ "$hdmi_off" ]
+if [ -n "$hdmi_off" ]
 then
 	MONITOR=eDP-1 polybar single_bar &
 else
