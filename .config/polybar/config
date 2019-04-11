@@ -47,21 +47,21 @@ line-color = #f00
 ;border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = MesloLGS Nerd Font:size=12;0
 font-1 = FontAwesome:size=12;0
 
 modules-left =  i3
 modules-center =
-modules-right = mpd pulseaudio wlan date battery
+modules-right = mpd_scroll mpd pulseaudio date battery
 
 tray-position = right
 tray-padding = 1
-;tray-background = #0063ff
+tray-background = ${colors.background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -96,17 +96,17 @@ line-color = #f00
 ;border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = MesloLGS Nerd Font:size=12;0
 font-1 = FontAwesome:size=12;0
 
 modules-left =  i3
 modules-center =
-modules-right = mpd pulseaudio wlan date battery
+modules-right = mpd_scroll mpd pulseaudio date battery
 
 tray-position = right
 tray-padding = 1
@@ -142,10 +142,10 @@ line-size = 3
 line-color = #f00
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = MesloLGS Nerd Font:size=12;0
 font-1 = FontAwesome:size=12;0
@@ -265,16 +265,21 @@ ws-icon-8 = 9;
 ws-icon-9 = 10;
 ws-icon-default =
 
+[module/mpd_scroll]
+type = custom/script
+exec = $HOME/.config/polybar/mpd_scroll.sh 
+tail = true
+
 [module/mpd]
 type = internal/mpd
-format-online = <label-song> <icon-prev> <icon-stop> <toggle> <icon-next>
-format-online-underline = #ffca28
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>
+;format-online-underline = #ffca28
 
-icon-prev = 
+icon-prev = 
 icon-stop = 
 icon-play = 
 icon-pause = 
-icon-next = 
+icon-next =  
 
 label-song-maxlen = 35
 label-song-ellipsis = true
@@ -323,7 +328,7 @@ interface = wlp1s0
 interval = 3.0
 
 format-connected = <label-connected>
-format-connected-underline = #ffb300
+;format-connected-underline = #ffb300
 label-connected =  %essid%
 
 format-disconnected =
@@ -367,7 +372,7 @@ time = " %H:%M"
 
 format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #ffa000
+;format-underline = #ffa000
 
 label = %{A3:gsimplecal:}%time%  %date%%{A}
 
@@ -377,7 +382,7 @@ type = internal/pulseaudio
 format-volume = %{A3:pavucontrol:}<ramp-volume> <label-volume>%{A}
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
-format-volume-underline = #ffc107
+;format-volume-underline = #ffc107
 
 label-muted =  muted
 label-muted-foreground = #666
@@ -439,14 +444,14 @@ adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ff8f00
+;format-charging-underline = #ff8f00
 
 format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+;format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 ;format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+;format-full-underline = ${self.format-charging-underline}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
