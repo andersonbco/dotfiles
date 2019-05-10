@@ -1,4 +1,4 @@
-URxvt.font: xft:RobotoMono\ Nerd\ Font:size=12
+URxvt.font: xft:FuraCode\ Nerd\ Font\ Mono:size=12
 URxvt.scrollBar: false
 URxvt.depth: 32
 URxvt.lineSpace: 1
