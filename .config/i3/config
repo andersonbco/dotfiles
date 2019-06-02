@@ -30,7 +30,7 @@ font pango: SNFS Display 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -254,20 +254,19 @@ for_window [class="jetbrains-idea"] layout tabbed
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down 30 px
 
 exec_always --no-startup-id setxkbmap -rules evdev -model pc105 -layout us -variant intl
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id synclient TapButton1=1 TapButton2=3 VertScrollDelta=-113 HorizTwoFingerScroll=1
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec_always --no-startup-id ~/.screenlayout/launch.sh
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec --no-startup-id i3-msg 'workspace $w10; append_layout ~/.config/i3/w10.json'
-exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -e cava'
-exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -e ncmpcpp -s playlist'
-exec --no-startup-id i3-msg 'workspace $w10; exec urxvt -name "tty-clock" -e tty-clock -c'
+exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "cava" -e cava'
+exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "ncmpcpp" -e ncmpcpp -s playlist'
+exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "tty-clock" -e tty-clock -c'
 exec --no-startup-id i3-msg 'workspace $w2;'
-exec --no-startup-id xrdb -merge ~/.Xresources
 exec --no-startup-id compton -f
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
-exec --no-startup-id synclient VertScrollDelta=-113 HorizTwoFingerScroll=1
 exec --no-startup-id franz
 
 assign [class="Google-chrome"] $w2

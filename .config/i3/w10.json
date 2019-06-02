@@ -19,7 +19,7 @@
             "percent": 0.5,
             "swallows": [
                {
-               "class": "^URxvt$",
+               "class": "^kitty$",
                "instance": "^tty-clock$"
                }
             ],
@@ -39,9 +39,8 @@
             "percent": 0.5,
             "swallows": [
                {
-               "class": "^URxvt$",
-               "instance": "^urxvt$",
-               "title": "^cava$"
+               "class": "^kitty$",
+               "instance": "^cava$"
                }
             ],
             "type": "con"
@@ -63,9 +62,8 @@
     "percent": 0.5,
     "swallows": [
        {
-       "class": "^URxvt$",
-       "instance": "^urxvt$",
-       "title": "^ncmpcpp$"
+       "class": "^kitty$",
+       "instance": "^ncmpcpp$"
        }
     ],
     "type": "con"
