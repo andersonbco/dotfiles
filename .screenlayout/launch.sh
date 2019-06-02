@@ -4,7 +4,7 @@ hdmi_off=$(xrandr -q | grep "HDMI-1" | grep "disconnected")
  
 if [ -n "$hdmi_off" ]
 then
-    ./default.sh
+    ~/.screenlayout/default.sh
 else
-    ./dual_screen.sh
+    ~/.screenlayout/dual_screen.sh
 fi
