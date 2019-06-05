@@ -230,8 +230,8 @@ enable-scroll = true
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-foreground = ${colors.foreground}
+label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%: %icon%
