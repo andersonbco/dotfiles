@@ -28,7 +28,7 @@ background-alt = #eee8d5
 foreground = #93a1a1
 ;foreground-alt = #555 arc-dark
 foreground-alt = #657b83
-primary = #ffb52a
+primary = #268bd2
 secondary = #e60053
 alert = #bd2c40
 
