@@ -19,5 +19,6 @@ set number
 set tabstop=2
 set autoindent
 set noshowmode
+set backspace=indent,eol,start
 
 :inoremap jj <Esc>
