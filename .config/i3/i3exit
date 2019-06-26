@@ -1,6 +1,6 @@
 #!/bin/bash
 lock() {
-  exec ~/.config/i3/i3lock-multimonitor/lock -i ~/my-dotfiles/Pictures/wallpaper.png
+  exec ~/.config/i3/i3lock-multimonitor/lock -i ~/dotfiles/Pictures/wallpaper.png
 }
 
 case "$1" in
