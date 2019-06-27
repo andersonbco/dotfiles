@@ -1,3 +1,5 @@
+![alt text](Pictures/neofetch.png)
+
 # my-dotfiles
 
 Config para o ambiente linux com o tema solarized light
