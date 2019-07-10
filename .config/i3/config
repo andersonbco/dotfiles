@@ -61,7 +61,7 @@ client.background       $base07
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty 
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -171,7 +171,7 @@ workspace $w6 output HDMI-1
 workspace $w7 output HDMI-1
 workspace $w8 output HDMI-1
 workspace $w9 output HDMI-1
-workspace $w10 output eDP-1 
+workspace $w10 output eDP-1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -181,26 +181,26 @@ bindsym $mod+Shift+d exec ~/.screenlayout/default.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-	# These bindings trigger as soon as you enter the resize mode
+  # These bindings trigger as soon as you enter the resize mode
 
-	# Pressing left will shrink the window’s width.
-	# Pressing right will grow the window’s width.
-	# Pressing up will shrink the window’s height.
-	# Pressing down will grow the window’s height.
-	bindsym j resize shrink width 10 px or 10 ppt
-	bindsym k resize grow height 10 px or 10 ppt
-	bindsym l resize shrink height 10 px or 10 ppt
-	bindsym semicolon resize grow width 10 px or 10 ppt
+  # Pressing left will shrink the window’s width.
+  # Pressing right will grow the window’s width.
+  # Pressing up will shrink the window’s height.
+  # Pressing down will grow the window’s height.
+  bindsym j resize shrink width 10 px or 10 ppt
+  bindsym k resize grow height 10 px or 10 ppt
+  bindsym l resize shrink height 10 px or 10 ppt
+  bindsym semicolon resize grow width 10 px or 10 ppt
 
-	# same bindings, but for the arrow keys
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
+  # same bindings, but for the arrow keys
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize grow height 10 px or 10 ppt
+  bindsym Up resize shrink height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
 
-	# back to normal: Enter or Escape
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -220,18 +220,33 @@ bindsym $mod+p mode "$mode_screenshot"
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
   bindsym l exec --no-startup-id ~/.config/i3/i3exit lock, mode "default"
-	bindsym e exec --no-startup-id ~/.config/i3/i3exit logout, mode "default"
-	bindsym s exec --no-startup-id ~/.config/i3/i3exit suspend, mode "default"
-	bindsym h exec --no-startup-id ~/.config/i3/i3exit hibernate, mode "default"
-	bindsym r exec --no-startup-id ~/.config/i3/i3exit reboot, mode "default"
-	bindsym Shift+s exec --no-startup-id ~/.config/i3/i3exit shutdown, mode "default"
+  bindsym e exec --no-startup-id ~/.config/i3/i3exit logout, mode "default"
+  bindsym s exec --no-startup-id ~/.config/i3/i3exit suspend, mode "default"
+  bindsym h exec --no-startup-id ~/.config/i3/i3exit hibernate, mode "default"
+  bindsym r exec --no-startup-id ~/.config/i3/i3exit reboot, mode "default"
+  bindsym Shift+s exec --no-startup-id ~/.config/i3/i3exit shutdown, mode "default"
 
-	# back to normal: Enter or Escape
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 bindsym $mod+l mode "$mode_system"
+
+set $mode_media Play with arrow keys
+mode "$mode_media" {
+  bindsym Up exec --no-startup-id pactl set-sink-volume 0 +5%
+  bindsym Down exec --no-startup-id pactl set-sink-volume 0 -5%
+  bindsym Left exec mpc prev
+  bindsym Right exec mpc next
+  bindsym space exec mpc toggle, mode "default"
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+m mode "$mode_media"
 
 bindsym $mod+Tab workspace back_and_forth
 
