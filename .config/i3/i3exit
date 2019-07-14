@@ -3,6 +3,9 @@ lock() {
   exec ~/.config/i3/i3lock-multimonitor/lock -i ~/dotfiles/Pictures/wallpaper.png
 }
 
+# with openrc use loginctl
+[[ $(cat /proc/1/comm) == "systemd" ]] && logind=systemctl || logind=loginctl
+
 case "$1" in
 	lock)
 		lock
@@ -11,16 +14,16 @@ case "$1" in
 		i3-msg exit
 		;;
 	suspend)
-		i3lock -c 000000 && systemctl suspend
+		i3lock -c 000000 && $logind suspend
 		;;
 	hibernate)
-		i3lock -c 000000 && systemctl hibernate
+		i3lock -c 000000 && $logind hibernate
 		;;
 	reboot)
-		systemctl reboot
+		$logind reboot
 		;;
 	shutdown)
-		systemctl poweroff
+		$logind poweroff
 		;;
 	*)
   echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
