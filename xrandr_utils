@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+count_monitors() {
+  NUMBER_OF_MONITORS=$(xrandr -q | grep -i " connected" | awk 'END {print NR}')
+}
+
+get_default_monitor() {
+  DEFAULT_MONITOR=$(xrandr -q | grep -i " connected" | awk 'NR==1{print $1}')
+}
+
+get_multiple_monitors() {
+  MONITOR_LIST=($(xrandr -q | grep -i " connected" | awk '{print $1}'))
+}

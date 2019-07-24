@@ -1,10 +1,16 @@
-#!/bin/sh
+#!/usr/bin/env bash
  
-hdmi_off=$(xrandr -q | grep "HDMI-1" | grep "disconnected")
- 
-if [ -n "$hdmi_off" ]
+. $HOME/dotfiles/xrandr_utils
+
+count_monitors 
+
+if [[ $NUMBER_OF_MONITORS -eq 1 ]]
 then
-    ~/.screenlayout/default.sh
+  get_default_monitor
+  echo "default"
+  ~/.screenlayout/default.sh $DEFAULT_MONITOR
 else
-    ~/.screenlayout/dual_screen.sh
+  get_multiple_monitors
+  echo "dual"
+  ~/.screenlayout/dual_screen.sh ${MONITOR_LIST[0]} ${MONITOR_LIST[1]}
 fi
