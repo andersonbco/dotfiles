@@ -6,11 +6,9 @@ count_monitors
 
 if [[ $NUMBER_OF_MONITORS -eq 1 ]]
 then
-  get_default_monitor
-  ~/.screenlayout/default.sh $DEFAULT_MONITOR
+	echo "default"
+  ~/.screenlayout/default.sh
 else
-  get_multiple_monitors
-  ~/.screenlayout/dual_screen.sh ${MONITOR_LIST[0]} ${MONITOR_LIST[1]}
+	echo "dual screen"
+  ~/.screenlayout/dual_screen.sh
 fi
-
-clean_xrandr_variables

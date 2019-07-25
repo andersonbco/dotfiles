@@ -12,6 +12,10 @@ get_multiple_monitors() {
   MONITOR_LIST=($(xrandr -q | grep -i " connected" | awk '{print $1}'))
 }
 
+get_monitors() {
+  MONITOR_LIST=($(xrandr -q | grep -i "connected" | awk 'FNR<=2{print $1}'))
+}
+
 clean_xrandr_variables() {
   unset NUMBER_OF_MONITORS
 	unset DEFAULT_MONITOR
