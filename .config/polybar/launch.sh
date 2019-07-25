@@ -16,9 +16,10 @@ then
 	MONITOR=$DEFAULT_MONITOR polybar single_bar &
 else
   get_multiple_monitors
-  MONITOR=${MONITOR_LIST[0]} polybar main_bar &
-	MONITOR=${MONITOR_LIST[1]} polybar aux_bar &
+  MONITOR=${MONITOR_LIST[0]} polybar aux_bar &
+	MONITOR=${MONITOR_LIST[1]} polybar main_bar &
 fi
 
+clear_xrandr_variables
 
 echo "Bars launched..."
