@@ -4,4 +4,13 @@
 
 get_monitors
 
-xrandr --output ${MONITOR_LIST[0]} --primary --mode 1920x1080 --pos 0x0 --rotate normal --off --output ${MONITOR_LIST[1]} --off
+get_sys_vendor_name
+
+if [[ $SYS_VENDOR == *"Apple"* ]]
+then
+  MODE="1920x1200"
+else
+  MODE="1920x1080"
+fi
+
+xrandr --output ${MONITOR_LIST[0]} --primary --mode $MODE --pos 0x0 --rotate normal --output ${MONITOR_LIST[1]} --off
