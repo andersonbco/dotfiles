@@ -8,6 +8,10 @@ get_monitors() {
   MONITOR_LIST=($(xrandr -q | grep -i "connected" | awk 'FNR<=2{print $1}'))
 }
 
+get_primary_monitor() {
+  PRIMARY_MONITOR=$(xrandr -q | grep -i "primary" | awk '{print $1}')
+}
+
 get_sys_vendor_name() {
   SYS_VENDOR=$(cat /sys/devices/virtual/dmi/id/sys_vendor)
 }

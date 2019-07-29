@@ -177,7 +177,7 @@ workspace $w10 output eDP-1
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+d exec ~/.screenlayout/default.sh
+bindsym $mod+Shift+d exec ~/.screenlayout/default.sh; exec ~/.config/polybar/launch.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

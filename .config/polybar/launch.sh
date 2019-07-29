@@ -8,16 +8,16 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-hdmi_connected=$(xrandr -q | grep -i "HDMI" | grep -i " connected")
+get_monitors
 
-if [ -n "$hdmi_connected" ]
+get_primary_monitor
+
+if [ ${MONITOR_LIST[0]} == $PRIMARY_MONITOR ]
 then
-  get_monitors
+  MONITOR=${MONITOR_LIST[0]} polybar single_bar &
+else
   MONITOR=${MONITOR_LIST[0]} polybar aux_bar &
   MONITOR=${MONITOR_LIST[1]} polybar main_bar &
-else
-  get_monitors
-  MONITOR=${MONITOR_LIST[0]} polybar single_bar &
 fi
 
 echo "Bars launched..."
