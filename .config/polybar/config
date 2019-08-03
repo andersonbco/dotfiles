@@ -17,18 +17,11 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-;background = #222
-;background = #2f343f arc-dark
-background = #fdf6e3
-;background-alt = #676E7D arc-dark
-background-alt = #eee8d5
-;foreground = ${xrdb:color7:#222}
-;foreground = #dfdfdf arc-dark
-foreground = #93a1a1
-;foreground-alt = #555 arc-dark
-foreground-alt = #657b83
-primary = #268bd2
+background = #32302f
+background-alt = #3c3836 
+foreground = #504945
+foreground-alt = #bdae93
+primary = #83a598 
 secondary = #e60053
 alert = #bd2c40
 
