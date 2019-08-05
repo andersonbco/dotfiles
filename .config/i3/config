@@ -289,7 +289,7 @@ exec --no-startup-id blueman-applet &
 exec --no-startup-id franz
 
 exec --no-startup-id i3-msg 'exec kitty -e nohup mopidy;sleep 5'
-exec --no-startup-id i3-msg 'exec kitty -e bum --size 370'
+exec --no-startup-id i3-msg 'workspace $w10; exec bum --size 370'
 assign [class="Google-chrome"] $w2
 assign [class="jetbrains-idea"] $w3
 assign [class="jetbrains-datagrip"] $w5
