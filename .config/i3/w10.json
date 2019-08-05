@@ -20,8 +20,7 @@
             "swallows": [
                {
                "class": "^mpv$",
-               "instance": "^gl$",
-               "title": "^bum$"
+               "instance": "^gl$"
                }
             ],
             "type": "con"
