@@ -273,9 +273,9 @@ for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move d
 
 exec_always --no-startup-id setxkbmap -rules evdev -model pc105 -layout us -variant intl
 exec_always --no-startup-id synclient TapButton1=1 TapButton2=3 VertScrollDelta=-113 HorizTwoFingerScroll=1
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec_always --no-startup-id ~/.screenlayout/launch.sh
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 
 exec --no-startup-id i3-msg 'workspace $w10; append_layout ~/.config/i3/w10.json'
 exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "cava" -e cava'
