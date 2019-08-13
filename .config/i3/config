@@ -294,6 +294,7 @@ assign [class="Google-chrome"] $w2
 assign [class="jetbrains-idea"] $w3
 assign [class="jetbrains-datagrip"] $w5
 assign [class="Franz"] $w1
+assign [class="mpv"] $w10
 
 gaps inner 15
 smart_gaps on
