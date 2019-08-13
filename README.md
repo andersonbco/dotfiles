@@ -13,8 +13,8 @@ awesome-fontconfig
 - zsh  
 - oh-my-zsh  
 - sdkman  
-- i3-gaps (compiled from source)  
-- polybar (compiled from source)  
+- [i3-gaps](https://github.com/Airblader/i3) (compiled from source)  
+- [polybar](https://github.com/polybar/polybar) (compiled from source)  
 - rofi  
 - i3lock  
 - feh  
@@ -22,13 +22,16 @@ awesome-fontconfig
 - i3lock-multimonitor  
 - compton  
 - lxappearance  
-- oomox (compiled from source)  
+- [oomox](https://github.com/themix-project/oomox) (compiled from source)  
 - mopidy  
 - ncmpcpp  
 - mpc  
-- zscroll (compiled from source)    
-- cava  (compiled from source)  
+- [zscroll](https://github.com/noctuid/zscroll) (compiled from source)    
+- [cava](https://github.com/karlstav/cava)  (compiled from source)  
 - pavucontrol  
 - tty-clock  
-- kitty (terminal)   
+- [kitty](https://github.com/kovidgoyal/kitty) (terminal)   
 - xserver-xorg-input-all (Ubuntu - para utilizar o synclient para gerenciar o touchpad)   
+- [dunst](https://github.com/dunst-project/dunst) (compiled from source - rounded borders support)
+- [bum](https://github.com/andersonbco/bum) (compiled from source)
+- [mpdnotify](https://github.com/andersonbco/mpdnotify)
