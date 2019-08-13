@@ -2,7 +2,7 @@
 
 # my-dotfiles
 
-Config para o ambiente linux com o tema solarized light
+Config para o ambiente linux com o tema gruvbox soft dark 
 
 # fontes utilizadas
 Hack e Hack Nerd Font  
