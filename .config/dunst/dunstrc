@@ -29,7 +29,7 @@
     sort = yes
 
     # Show how many messages are currently hidden (because of geometry).
-    indicate_hidden = yes
+    indicate_hidden = no
 
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
@@ -39,8 +39,7 @@
     # window allows bounces back and forth.
     # This option conflicts with "word_wrap".
     # Set to 0 to disable.
-    bounce_freq = 5
-
+    bounce_freq = 0 
 
     # Show age of message if message is older than show_age_threshold
     # seconds.
@@ -54,6 +53,7 @@
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
 
+    hide_duplicates_count = yes
 
     # The geometry of the window:
     #   [{width}]x{height}[+/-{x}+/-{y}]
@@ -102,13 +102,13 @@
 
     # Should a notification popped up from history be sticky or timeout
     # as if it would normally do.
-    sticky_history = yes
+    sticky_history = no 
 
     # Maximum amount of notifications kept in history
     history_length = 20
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = yes
+    show_indicators = no 
 
     # The height of a single line.  If the height is smaller than the
     # font height, it will get raised to the font height.
