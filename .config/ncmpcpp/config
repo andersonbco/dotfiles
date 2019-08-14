@@ -109,7 +109,7 @@ mpd_crossfade_time = 5
 ## Time of inactivity (in seconds) after playlist highlighting will be disabled
 ## (0 = always on).
 ##
-playlist_disable_highlight_delay = 5
+playlist_disable_highlight_delay = 2 
 #
 ## Defines how long messages are supposed to be visible.
 ##
@@ -200,7 +200,7 @@ alternative_header_second_line_format ="$0{%a} $b$8-$9$/b {%b}$9"
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = "$u$2"
+now_playing_prefix = "$4>>>$4"
 #
 now_playing_suffix = "$2$/u$2"
 #
@@ -291,11 +291,11 @@ playlist_shorten_total_times = no
 ##
 ## Note: Possible display modes: classic, columns.
 ##
-playlist_display_mode = classic
+playlist_display_mode = columns
 #
-browser_display_mode = classic
+browser_display_mode = columns
 #
-search_engine_display_mode = classic
+search_engine_display_mode = columns
 #
 #playlist_editor_display_mode = classic
 #
@@ -317,7 +317,7 @@ centered_cursor = no
 ## Note: You can specify third character which will be used to build 'empty'
 ## part of progressbar.
 ##
-progressbar_look = ▉▉▉
+progressbar_look = => 
 #
 ## Available values: database, playlist.
 ##
@@ -325,7 +325,7 @@ default_place_to_search_in = database
 #
 ## Available values: classic, alternative.
 ##
-user_interface = classic
+user_interface = alternative
 #
 #data_fetching_delay = yes
 #
@@ -345,7 +345,7 @@ header_visibility = no
 #
 statusbar_visibility = yes
 #
-titles_visibility = no
+titles_visibility = yes 
 #
 header_text_scrolling = yes
 #
@@ -512,15 +512,15 @@ colors_enabled = yes
 #
 empty_tag_color = white
 #
-header_window_color = white
+header_window_color = yellow 
 #
-volume_color = blue
+volume_color = yellow 
 #
-state_line_color = white
+state_line_color = white 
 #
 state_flags_color = white
 #
-main_window_color = blue
+main_window_color = yellow 
 #
 #color1 = white
 #
@@ -528,7 +528,7 @@ main_window_color = blue
 #
 progressbar_color = black
 #
-progressbar_elapsed_color = cyan
+progressbar_elapsed_color = yellow 
 #
 statusbar_color = red
 #
