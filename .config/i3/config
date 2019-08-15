@@ -270,6 +270,8 @@ for_window [class="Pidgin"] floating enable
 for_window [class="Conky"] floating enable
 for_window [class="jetbrains-idea"] layout tabbed
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down 30 px
+for_window [instance="^mopidy"] move scratchpad
+for_window [instance="^bum"] move strachpad
 
 exec_always --no-startup-id setxkbmap -rules evdev -model pc105 -layout us -variant intl
 exec_always --no-startup-id synclient TapButton1=1 TapButton2=3 VertScrollDelta=-113 HorizTwoFingerScroll=1
@@ -277,19 +279,19 @@ exec_always --no-startup-id ~/.screenlayout/launch.sh
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 
-exec --no-startup-id i3-msg 'workspace $w10; append_layout ~/.config/i3/w10.json'
-exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "cava" -e cava'
-exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "ncmpcpp" -e ncmpcpp -s playlist -S search_engine'
-exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "tty-clock" -e tty-clock -c -C 3'
-exec --no-startup-id i3-msg 'workspace $w2;'
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id compton -f
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id franz
+exec --no-startup-id i3-msg 'workspace $w10; append_layout ~/.config/i3/w10.json'
+exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "cava" -e cava'
+exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "ncmpcpp" -e ncmpcpp -s playlist -S search_engine'
+exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "tty-clock" -e tty-clock -c -C 3'
+exec --no-startup-id i3-mdg 'exec kitty --name "mopidy" -e mopidy'
+exec --no-startup-id i3-msg 'exec kitty --name "bum" -e bum'
+exec --no-startup-id i3-msg 'workspace $w2;'
 
-exec --no-startup-id i3-msg 'exec kitty -e nohup mopidy;sleep 5'
-exec --no-startup-id i3-msg 'workspace $w10; exec bum --size 370'
 assign [class="Google-chrome"] $w2
 assign [class="jetbrains-idea"] $w3
 assign [class="jetbrains-datagrip"] $w5
