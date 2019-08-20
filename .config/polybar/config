@@ -21,6 +21,7 @@ background = #32302f
 background-alt = #3c3836 
 foreground = #fabd2f
 foreground-alt = #bdae93
+foreground-unfocused = #a89984
 primary = #83a598 
 secondary = #e60053
 alert = #bd2c40
@@ -175,19 +176,22 @@ label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%: %icon%
-label-focused-background = ${colors.background-alt}
-label-focused-underline = ${colors.primary}
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-underline = ${colors.foreground}
 label-focused-padding = 1
 label-focused-font = 2 
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%: %icon%
+label-unfocused-foreground = ${colors.foreground-unfocused}
 label-unfocused-padding = 1 
 label-unfocused-font = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%: %icon%
 label-visible-background = ${self.label-focused-background}
+label-visible-foreground = ${self.label-focused-foreground}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 label-visible-font = 2
