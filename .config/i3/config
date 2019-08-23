@@ -233,7 +233,7 @@ mode "$mode_system" {
 
 bindsym $mod+l mode "$mode_system"
 
-set $mode_media Play with arrow keys
+set $mode_media media
 mode "$mode_media" {
   bindsym Up exec --no-startup-id pactl set-sink-volume 0 +5%
   bindsym Down exec --no-startup-id pactl set-sink-volume 0 -5%
