@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+feh --bg-scale ~/Pictures/wallpaper.png
+
+exec ~/.config/polybar/launch.sh

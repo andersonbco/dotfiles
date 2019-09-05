@@ -177,7 +177,7 @@ workspace $w10 output eDP-1
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+d exec ~/.screenlayout/default.sh; exec ~/.config/polybar/launch.sh
+bindsym $mod+Shift+d exec autorandr --load undocked
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -272,11 +272,15 @@ for_window [class="Conky"] floating enable
 for_window [class="jetbrains-idea"] layout tabbed
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down 30 px
 
+assign [class="Google-chrome"] $w2
+assign [class="jetbrains-idea"] $w3
+assign [class="jetbrains-datagrip"] $w5
+assign [class="Franz"] $w1
+assign [class="mpv"] $w10
+
 exec_always --no-startup-id setxkbmap -rules evdev -model pc105 -layout us -variant intl
 exec_always --no-startup-id synclient TapButton1=1 TapButton2=3 VertScrollDelta=-113 HorizTwoFingerScroll=1
-exec_always --no-startup-id ~/.screenlayout/launch.sh
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
+exec_always --no-startup-id autorandr --change 
 
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id compton -f
@@ -288,12 +292,6 @@ exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "cava" -e cava'
 exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "ncmpcpp" -e ncmpcpp -s playlist -S search_engine'
 exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "tty-clock" -e tty-clock -c -C 3'
 exec --no-startup-id i3-msg 'workspace $w2;'
-
-assign [class="Google-chrome"] $w2
-assign [class="jetbrains-idea"] $w3
-assign [class="jetbrains-datagrip"] $w5
-assign [class="Franz"] $w1
-assign [class="mpv"] $w10
 
 gaps inner 15
 smart_gaps on
