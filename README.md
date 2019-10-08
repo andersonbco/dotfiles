@@ -35,3 +35,4 @@ awesome-fontconfig
 - [dunst](https://github.com/dunst-project/dunst) (compiled from source - rounded borders support)
 - [bum](https://github.com/andersonbco/bum) (compiled from source)
 - [mpdnotify](https://github.com/andersonbco/mpdnotify)
+- autorandr
