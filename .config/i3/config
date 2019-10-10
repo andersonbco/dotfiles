@@ -281,6 +281,10 @@ for_window [class="Conky"]                  floating enable
 for_window [class="jetbrains-idea"] layout tabbed
 for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down 30 px
 
+# IDEA specific config
+for_window [class="^jetbrains-.+"][window_type=dialog] focus
+for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
+
 assign [class="Google-chrome"]      $w2
 assign [class="jetbrains-idea"]     $w3
 assign [class="jetbrains-datagrip"] $w5
