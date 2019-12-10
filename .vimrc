@@ -2,11 +2,13 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme gruvbox
-set background=dark
-let g:gruvbox_contrast_dark = 'soft'
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 let g:airline_powerline_fonts=1
+let g:airline_theme='bubblegum'
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'

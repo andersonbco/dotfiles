@@ -4,6 +4,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/$USER/.oh-my-zsh"
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 DEFAULT_USER=$USER
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -65,7 +71,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.fonts/*.sh
 
 # NODEJS
-VERSION=v10.16.0
+VERSION=v12.13.1
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
@@ -78,6 +84,11 @@ export SDKMAN_DIR="/home/$USER/.sdkman"
 [[ -s "/home/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/home/$USER/.sdkman/bin/sdkman-init.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
 # Base16 Gruvbox dark, soft
 # Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
@@ -110,3 +121,11 @@ export FZF_DEFAULT_OPTS="
 }
 
 _gen_fzf_default_opts
+
+eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib=~/perl5)
+
+PATH="/home/anderson-correa/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/anderson-correa/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/anderson-correa/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/anderson-correa/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/anderson-correa/perl5"; export PERL_MM_OPT;
