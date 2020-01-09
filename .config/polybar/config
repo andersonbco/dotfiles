@@ -56,7 +56,7 @@ font-2 = TakaoPGothic:style=Regular:size=12;0
 
 modules-left =  i3
 modules-center =
-modules-right = pulseaudio date battery
+modules-right = mpd_scroll mpd pulseaudio date battery
 
 tray-position = right
 tray-padding = 1
@@ -106,7 +106,7 @@ font-2 = TakaoPGothic:style=Regular:size=12;0
 
 modules-left =  i3
 modules-center =
-modules-right = pulseaudio date battery
+modules-right = mpd_scroll mpd pulseaudio date battery
 
 tray-position = right
 tray-padding = 1
