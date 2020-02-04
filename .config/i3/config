@@ -318,10 +318,6 @@ exec --no-startup-id compton -f
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id franz
-exec --no-startup-id i3-msg 'workspace $w10; append_layout ~/.config/i3/w10.json'
-exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "cava" -e cava'
-exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "ncmpcpp" -e ncmpcpp -s playlist -S search_engine'
-exec --no-startup-id i3-msg 'workspace $w10; exec kitty --name "tty-clock" -e tty-clock -c -C 3'
 exec --no-startup-id i3-msg 'workspace $w2;'
 
 gaps inner 15
