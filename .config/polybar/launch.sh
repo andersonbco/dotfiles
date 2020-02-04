@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
 
-. $HOME/dotfiles/xrandr_utils
-
 # Terminate already running bar instances
 killall -q polybar
 
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-get_monitors
+MONITOR_LIST=($(xrandr -q | grep -i "connected" | awk 'FNR<=2{print $1}'))
 
-get_primary_monitor
+PRIMARY_MONITOR=$(xrandr -q | grep -i "primary" | awk '{print $1}')
 
 if [ ${MONITOR_LIST[0]} == $PRIMARY_MONITOR ]
 then

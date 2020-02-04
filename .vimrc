@@ -2,6 +2,11 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
 let g:airline_powerline_fonts=1
 let g:airline_theme='bubblegum'
 

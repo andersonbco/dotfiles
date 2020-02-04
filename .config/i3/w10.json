@@ -2,21 +2,41 @@
     "border": "normal",
     "floating": "auto_off",
     "layout": "splitv",
-    "percent": 0.5,
+    "percent": 0.3,
     "type": "con",
     "nodes": [
         {
             "border": "pixel",
             "current_border_width": 1,
+            "floating": "user_off",
+            "geometry": {
+               "height": 370,
+               "width": 370,
+               "x": 775,
+               "y": 414
+            },
+            "name": "bum",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+               "class": "^mpv$",
+               "instance": "^gl$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
             "floating": "auto_off",
             "geometry": {
-               "height": 484,
-               "width": 884,
+               "height": 1170,
+               "width": 1920,
                "x": 0,
                "y": 0
             },
             "name": "clock",
-            "percent": 0.5,
+            "percent": 0.333333333333333,
             "swallows": [
                {
                "class": "^kitty$",
@@ -30,13 +50,13 @@
             "current_border_width": 1,
             "floating": "auto_off",
             "geometry": {
-               "height": 484,
-               "width": 884,
+               "height": 1170,
+               "width": 1920,
                "x": 0,
                "y": 0
             },
             "name": "cava",
-            "percent": 0.5,
+            "percent": 0.333333333333333,
             "swallows": [
                {
                "class": "^kitty$",
@@ -53,13 +73,13 @@
     "current_border_width": 1,
     "floating": "auto_off",
     "geometry": {
-       "height": 484,
-       "width": 884,
+       "height": 1170,
+       "width": 1920,
        "x": 0,
        "y": 0
     },
-    "name": "ncmpcpp 0.7.5",
-    "percent": 0.5,
+    "name": "ncmpcpp 0.8.2",
+    "percent": 0.7,
     "swallows": [
        {
        "class": "^kitty$",
