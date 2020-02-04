@@ -1,0 +1,11 @@
+tmux new \; \
+set -g status off \; \
+send-keys '~/scripts/cover.sh' C-m \; \
+split-window -h \; \
+resize-pane -t 0 -x 40 \; \
+select-pane -t 1 \; \
+send-keys 'ncmpcpp -s playlist -S search_engine' C-m \; \
+select-pane -t 0 \; \
+split-window -v \; \
+send-keys 'cava' C-m \; \
+select-pane -t 2 \;
