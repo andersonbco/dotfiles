@@ -68,16 +68,13 @@ plugins=(git mvn zsh-autosuggestions zsh-syntax-highlighting)
 bindkey \^U backward-kill-line
 
 source $ZSH/oh-my-zsh.sh
-source ~/.fonts/*.sh
 
 # NODEJS
-VERSION=v12.13.1
+VERSION=v12.14.1
 DISTRO=linux-x64
 export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
 
-# PYTHONPATH
-PYTHONPATH="/home/$USER/.local/lib/python3.6/site-packages/"
-export PYTHONPATH
+export PATH=$HOME/.local/bin:$PATH
 
 # SDKMAN
 export SDKMAN_DIR="/home/$USER/.sdkman"
@@ -121,11 +118,3 @@ export FZF_DEFAULT_OPTS="
 }
 
 _gen_fzf_default_opts
-
-eval $(perl -I ~/perl5/lib/perl5/ -Mlocal::lib=~/perl5)
-
-PATH="/home/anderson-correa/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/anderson-correa/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/anderson-correa/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/anderson-correa/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/anderson-correa/perl5"; export PERL_MM_OPT;
