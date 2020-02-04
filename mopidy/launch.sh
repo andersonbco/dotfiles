@@ -8,10 +8,10 @@ if [ -e nohup.out ]; then
 fi
 
 # kill all running instances of bum
-killall -q bum
+killall -q mpdcron 
 
 # wait until the processes have been shut down
-while pgrep -u $UID -x bum >/dev/null; do sleep 1; done
+while pgrep -u $UID -x mpdcron >/dev/null; do sleep 1; done
 
 # kill all running instances of mopidy
 killall -q mopidy
@@ -26,4 +26,4 @@ nohup mopidy &
 sleep 5
 
 # start bum and fork to the background
-nohup bum &
+mpdcron
