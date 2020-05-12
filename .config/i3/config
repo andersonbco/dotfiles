@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Hack 12
+font pango: Hack 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -61,7 +61,7 @@ client.background       $base07
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -162,16 +162,16 @@ bindsym $mod+Shift+9 move container to workspace $w9
 bindsym $mod+Shift+0 move container to workspace $w10
 
 # workspace default monitors
-workspace $w1 output eDP-1
-workspace $w2 output HDMI-1
-workspace $w3 output HDMI-1
-workspace $w4 output HDMI-1
-workspace $w5 output HDMI-1
-workspace $w6 output HDMI-1
-workspace $w7 output HDMI-1
-workspace $w8 output HDMI-1
-workspace $w9 output HDMI-1
-workspace $w10 output eDP-1
+workspace $w1 output DP-2
+workspace $w2 output HDMI-0
+workspace $w3 output HDMI-0
+workspace $w4 output HDMI-0
+workspace $w5 output HDMI-0
+workspace $w6 output HDMI-0
+workspace $w7 output HDMI-0
+workspace $w8 output HDMI-0
+workspace $w9 output HDMI-0
+workspace $w10 output DP-2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -265,6 +265,12 @@ bindsym $mod+Shift+m exec --no-startup-id ~/mopidy/launch.sh
 
 bindsym $mod+Tab workspace back_and_forth
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 hide_edge_borders both
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -307,13 +313,14 @@ assign [class="jetbrains-datagrip"] $w5
 assign [class="Franz"]              $w1
 assign [class="mpv"]                $w10
 
-exec_always --no-startup-id setxkbmap -rules evdev -model pc105 -layout us -variant intl
+exec_always --no-startup-id setxkbmap -rules evdev -model pc105 -layout us -variant intl -option compose:rctrl
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec_always --no-startup-id autorandr --change
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id ~/scripts/picom.sh
 
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id compton -f
+# exec --no-startup-id compton -f
 exec --no-startup-id nm-applet &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id franz
