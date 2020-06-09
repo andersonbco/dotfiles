@@ -105,7 +105,7 @@ bindsym $mod+7 workspace $w7
 bindsym $mod+8 workspace $w8
 bindsym $mod+9 workspace $w9
 bindsym $mod+0 workspace $w10
-bindsym $mod+a workspace $w11; exec --no-startup-id ~/scripts/ranger.sh # this is not working
+bindsym $mod+a workspace $w11, exec --no-startup-id kitty ~/scripts/ranger.sh
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $w1
