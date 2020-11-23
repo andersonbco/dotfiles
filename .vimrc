@@ -22,6 +22,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'lilydjwg/colorizer'
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dzeban/vim-log-syntax'
 
 call plug#end()
 

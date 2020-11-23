@@ -182,7 +182,7 @@ message_delay_time = 3
 ## Note: colors can be nested.
 ##
 #
-song_list_format = "{$5%a} $2»$8»$5» {$8%t}|{$8%f}$R{$2%b}"
+song_list_format = "{$4%l} {$5%a} $2»$8»$5» {$8%t}|{$8%f}$R{$2%b}"
 #
 song_status_format = "{$8%a} $2»$8»$5» $b{$1%b}$/b"
 #
@@ -200,7 +200,7 @@ alternative_header_second_line_format ="$0{%a} $b$8-$9$/b {%b}$9"
 #
 #current_item_inactive_column_suffix = $/r$(end)
 #
-now_playing_prefix = "$4>>>$4"
+now_playing_prefix = "$4>> $4"
 #
 now_playing_suffix = "$2$/u$2"
 #
@@ -262,7 +262,7 @@ browser_sort_format = {%a - }{%t}|{%f} {(%l)}
 ##   available.
 ##
 #
-song_columns_list_format = "(10)[black]{l} (30)[blue]{a} (30)[green]{b} (30)[magenta]{t}"
+song_columns_list_format = "(10)[yellow]{l} (30)[blue]{a} (30)[green]{b} (30)[magenta]{t}"
 #
 ##### various settings #####
 #

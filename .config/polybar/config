@@ -18,16 +18,17 @@
 
 [colors]
 background = #32302f
-background-alt = #3c3836 
+background-alt = #3c3836
 foreground = #fabd2f
 foreground-alt = #bdae93
 foreground-unfocused = #a89984
-primary = #83a598 
+primary = #83a598
 secondary = #e60053
-alert = #bd2c40
+alert = #cc241d
+alert-foreground = #BDAE93
 
 [bar/single_bar]
-monitor = ${env:MONITOR} 
+monitor = ${env:MONITOR}
 width = 100%
 height = 30
 ;offset-x = 1%
@@ -50,9 +51,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Hack Nerd Font:style=Regular:size=12;0
-font-1 = FontAwesome:size=12;0
-font-2 = TakaoPGothic:style=Regular:size=12;0
+font-0 = mplus Nerd Font,M+ 1c:style=medium,Regular:size=12;0
 
 modules-left =  i3
 modules-center =
@@ -100,9 +99,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Hack Nerd Font:style=Regular:size=12;0
-font-1 = FontAwesome:size=12;0
-font-2 = TakaoPGothic:style=Regular:size=12;0
+font-0 = mplus Nerd Font,M+ 1c:style=medium,Regular:size=12;0
 
 modules-left =  i3
 modules-center =
@@ -147,9 +144,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Hack Nerd Font:style=Regular:size=12;0
-font-1 = FontAwesome:size=12;0
-font-2 = TakaoPGothic:style=Regular:size=12;0
+font-0 = mplus Nerd Font,M+ 1c:style=medium,Regular:size=12;0
 
 modules-left = i3
 modules-center =
@@ -170,52 +165,68 @@ enable-scroll = true
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
-label-mode-padding = 2 
+label-mode-padding = 4
+label-mode-font = 4
 label-mode-foreground = ${colors.foreground}
 label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
-label-focused = %name%: %icon%
+label-focused = %icon%
 label-focused-background = ${colors.background}
 label-focused-foreground = ${colors.foreground}
 label-focused-underline = ${colors.foreground}
-label-focused-padding = 1
-label-focused-font = 2 
+label-focused-padding = ${self.label-mode-padding}
+label-focused-font = ${self.label-mode-font}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %name%: %icon%
+label-unfocused = %icon%
 label-unfocused-foreground = ${colors.foreground-unfocused}
-label-unfocused-padding = 1 
-label-unfocused-font = 2
+label-unfocused-padding = ${self.label-mode-padding}
+label-unfocused-font = ${self.label-mode-font}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %name%: %icon%
+label-visible = %icon%
 label-visible-background = ${self.label-focused-background}
 label-visible-foreground = ${self.label-focused-foreground}
 label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-label-visible-font = 2
+label-visible-padding = ${self.label-mode-padding}
+label-visible-font = ${self.label-mode-font}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %name%: %icon%
+label-urgent = %icon%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-label-urgent-font = 2
+label-urgent-foreground = ${colors.alert-foreground}
+label-urgent-padding = ${self.label-mode-padding}
+label-urgent-font = ${self.label-mode-font}
 
 ; Separator in between workspaces
 ; label-separator = |
 
+;ws-icon-0 = 一;
+;ws-icon-1 = 二;
+;ws-icon-2 = 三;
+;ws-icon-3 = 四;
+;ws-icon-4 = 五;
+;ws-icon-5 = 六;
+;ws-icon-6 = 七;
+;ws-icon-7 = 八;
+;ws-icon-8 = 九;
+;ws-icon-9 = 十;
+;ws-icon-10 = 十一;
+;ws-icon-default =
+
 ws-icon-0 = 1;
-ws-icon-1 = 2;
+ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;
+ws-icon-3 = 4;
 ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
-ws-icon-default =
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-10 = 11;
+ws-icon-default = 
 
 [module/mpd_scroll]
 type = custom/script
