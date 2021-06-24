@@ -4,11 +4,12 @@ export PATH=$HOME/.local/bin:$PATH
 # RUST
 export PATH=$HOME/.cargo/bin:$PATH
 # GO
-export PATH=$PATH:/usr/local/go/bin
+export PATH=/usr/local/go/bin:$PATH # GOROOT
+export PATH=$HOME/go/bin:$PATH # GOPATH
 # NODEJS
-VERSION=v12.16.1
-DISTRO=linux-x64
-export PATH=/usr/local/lib/nodejs/node-$VERSION-$DISTRO/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # SDKMAN
 export SDKMAN_DIR="/home/$USER/.sdkman"
 [[ -s "/home/$USER/.sdkman/bin/sdkman-init.sh" ]] && source "/home/$USER/.sdkman/bin/sdkman-init.sh"
@@ -86,3 +87,5 @@ _gen_fzf_default_opts
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias cat=bat
+alias vim=nvim
+
